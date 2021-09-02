@@ -1,18 +1,46 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
+const OneLinkHeader = ()=>{
+    return(
+        <View>
+            <Text style={styleOneLinkHeader.link}>Videos</Text>
+        </View>
+    );
+};
+const styleOneLinkHeader = StyleSheet.create({
+    link:{
+        color:"#4A4A4C",
+    }
+});
 
 const LinksHeader = ()=>{
     return(// Aqui dentro eu coloco meu JSX
-        <View style={StyleLinksHeader.container}>
-            <Text>Eu sou o professor</Text>
+        <View style={styleLinksHeader.container}>
+            <Text style={{color:"#4A4A4C"}}>Home</Text>
+            <Text style={styleLinksHeader.link}>Post</Text>
+            <Text>Videos</Text>
+            <Text>Photos</Text>
+            <Text>Community</Text>
+            <OneLinkHeader/>
+            <OneLinkHeader/>
+            <OneLinkHeader/>
+            <OneLinkHeader/>
+            <OneLinkHeader/>
+            <OneLinkHeader/>
+            <OneLinkHeader/>
+            <OneLinkHeader/>
         </View>
     );
 };
 
-const StyleLinksHeader = StyleSheet.create({
+const styleLinksHeader = StyleSheet.create({
     container:{
-        backgroundColor:"blue",color:"white"
+        backgroundColor:"lightblue",
+        color:"white",
+    },
+    link:{
+        color:"#4A4A4C",
     }
 });
 
