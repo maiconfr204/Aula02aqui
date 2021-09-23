@@ -1,5 +1,5 @@
 import React from 'react';
-import {View , Text , StyleSheet} from 'react-native';
+import {View , Text , StyleSheet , Image} from 'react-native';
 
 export const Post = () =>{
     return(
@@ -10,10 +10,21 @@ export const Post = () =>{
                 </View>
                 <View style={styles.headerViewTextos}>
                     <Text style={styles.headerViewTextosTitulo}>Unblast</Text>
-                    <Text>2hrs</Text>
-                    {/* <Image/> */}
+                    <View style={styles.headerViewTextosHorario}>
+                        <Text>2hrs</Text>
+                        <Image 
+                            style={styles.headerViewImageGlobo} 
+                            source={require('../../assets/globo.png')} 
+                            />
+                    </View>
                 </View>
             </View>
+            <View>
+                <Text style={styles.TextoPublicacao}>
+                    Este é o design que vamos replicar hoje na aula: <Text style={styles.TextoPublicacaoLink}>https://mockupsfreebies.com/social-media/facebook/free-facebook-mobile-post-mockup</Text>
+                </Text>
+            </View>
+            
         </View>
     );
 }
@@ -38,5 +49,22 @@ const styles = StyleSheet.create({
     },
     headerViewTextosTitulo:{
         fontWeight:'bold',
+        fontSize:16,
+    },
+    headerViewImageGlobo:{
+        height:17,
+        width:17,
+        marginLeft:5,
+    },
+    headerViewTextosHorario:{
+        flexDirection:'row',
+        alignItems:'center',
+    },
+    TextoPublicacao:{
+        marginTop:20,
+        fontSize:15,
+    },
+    TextoPublicacaoLink:{
+        color: '#4D6196',
     },
 });
