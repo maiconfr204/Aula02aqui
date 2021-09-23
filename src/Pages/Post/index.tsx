@@ -1,5 +1,5 @@
 import React from 'react';
-import {View , Text , StyleSheet , Image} from 'react-native';
+import {View , Text , StyleSheet , Image , TouchableOpacity} from 'react-native';
 
 export const Post = () =>{
     return(
@@ -23,6 +23,36 @@ export const Post = () =>{
                 <Text style={styles.TextoPublicacao}>
                     Este é o design que vamos replicar hoje na aula: <Text style={styles.TextoPublicacaoLink}>https://mockupsfreebies.com/social-media/facebook/free-facebook-mobile-post-mockup</Text>
                 </Text>
+                <Image 
+                            style={styles.headerViewImagePulicacao} 
+                            source={require('../../assets/image.png')} 
+                            />
+            </View>
+            <View style={styles.likes}>
+                <Image style={styles.likesButton}  source={require('../../assets/likes.png')}/>
+                <Text style={styles.likesText}>12</Text>
+            </View>
+
+            <View style={styles.linkeShare}>
+                <View style={styles.linkeShareItem}>
+                    <Image style={styles.headerViewImageGlobo}  source={require('../../assets/like.png')}/>
+                    <Text style={styles.linkeShareItemText}>Like</Text>
+                </View>
+                <View style={styles.linkeShareItem}>
+                    <Image style={styles.headerViewImageGlobo}  source={require('../../assets/comentario.png')}/>
+                    <Text style={styles.linkeShareItemText}>Comentário</Text>
+                </View>
+                <View style={styles.linkeShareItem}>
+                    <Image style={styles.headerViewImageGlobo}  source={require('../../assets/like.png')}/>
+                    <Text style={styles.linkeShareItemText}>Share</Text>
+                </View>
+            </View>
+
+            <View style={styles.viewButton}>
+                <TouchableOpacity style={styles.button} onPress={()=>{}}>
+                    <Text style={styles.viewButtonText}> Learn More</Text>
+                </TouchableOpacity>
+                    
             </View>
             
         </View>
@@ -67,4 +97,51 @@ const styles = StyleSheet.create({
     TextoPublicacaoLink:{
         color: '#4D6196',
     },
+    headerViewImagePulicacao:{
+        width:358,
+        height:282,
+    },
+    likesButton:{
+        height:30,
+        width:30,
+    },
+    likes:{
+        marginTop:10,
+        flexDirection:'row',
+    },
+    likesText:{
+        textAlignVertical:'center',
+        paddingLeft:8,
+    },
+    linkeShare:{
+        flexDirection:'row',
+        marginHorizontal:30,
+        marginVertical:20,
+        justifyContent:'space-between'
+    },
+    linkeShareItem:{
+        flexDirection:'row',
+        alignItems:'center',
+    },
+    linkeShareItemText:{
+        paddingLeft:5,
+    },
+    viewButton:{
+        backgroundColor:'#3D7BE2',
+        alignItems:'center',
+        justifyContent:'center',
+        borderRadius:5,
+        
+    },
+    button:{},
+    viewButtonText:{
+        color: '#FDF7FD',
+        fontSize:15,
+        height:43,
+        textAlignVertical:'center',
+        
+
+    },
+
+
 });

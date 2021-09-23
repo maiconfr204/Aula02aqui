@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import {Text, View, Image, TextInput , TouchableOpacity} from 'react-native';
+import {Text, View, Image, TextInput , TouchableOpacity, ScrollView} from 'react-native';
 import { styleLinksHeader, styleOneLinkHeader, styles } from './style';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -69,8 +69,14 @@ const Home = () => {
                 </Image>
             </View>
             <LinksHeader></LinksHeader>
-            <Post/>
-
+            <ScrollView>
+                <Post/>
+                <Post/>
+                <Post/>
+                <Post/>
+                <Post/>
+                <Post/>
+            </ScrollView>
             {/* <View style={styles.viewButton}>
                 <TouchableOpacity style={styles.button} onPress={irParaTelaLogin}>
                     <Text style={styles.viewButtonText}> Ir para outra tela</Text>
