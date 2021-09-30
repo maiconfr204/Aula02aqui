@@ -69,20 +69,17 @@ const Home = () => {
                 </Image>
             </View>
             <LinksHeader></LinksHeader>
+
+            <TouchableOpacity onPress={irParaTelaLogin}>
+                <Text>Ir para login</Text>
+            </TouchableOpacity>
+
+
             <ScrollView>
                 <Post/>
                 <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
             </ScrollView>
-            {/* <View style={styles.viewButton}>
-                <TouchableOpacity style={styles.button} onPress={irParaTelaLogin}>
-                    <Text style={styles.viewButtonText}> Ir para outra tela</Text>
-                </TouchableOpacity>
-                    
-            </View> */}
+            {/*  */}
         </View>
     );
 

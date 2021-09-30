@@ -52,7 +52,12 @@ export const Post = () =>{
                 <TouchableOpacity style={styles.button} onPress={()=>{}}>
                     <Text style={styles.viewButtonText}> Learn More</Text>
                 </TouchableOpacity>
-                    
+                <TouchableOpacity style={styles.buttonMensager} onPress={()=>{}}>
+                    <Image style={{width:16,height:16}} source={require('../../assets/btnmensagem.png')}/>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.buttonMais}  onPress={()=>{}}>
+                    <Image style={{height:3,width:13}} source={require('../../assets/3pontos.png')}/>
+                </TouchableOpacity>
             </View>
             
         </View>
@@ -127,13 +132,22 @@ const styles = StyleSheet.create({
         paddingLeft:5,
     },
     viewButton:{
-        backgroundColor:'#3D7BE2',
-        alignItems:'center',
-        justifyContent:'center',
+        // backgroundColor:'#3D7BE2',
+        // alignItems:'center',
+        // justifyContent:'center',
         borderRadius:5,
+        flexDirection:'row',
+        
+        
         
     },
-    button:{},
+    button:{
+        flex:5,
+        backgroundColor:'#3D7BE2',
+        justifyContent:'center',
+        alignItems:'center',
+        borderRadius:5,
+    },
     viewButtonText:{
         color: '#FDF7FD',
         fontSize:15,
@@ -142,6 +156,23 @@ const styles = StyleSheet.create({
         
 
     },
-
+    buttonMensager:{
+        flex:1,
+        backgroundColor: '#3D7BE2',
+        justifyContent:'center',
+        alignItems:'center',
+        marginLeft:10,
+        borderRadius:5,
+    },
+    buttonMais:{
+        flex:1,
+        borderColor: '#3D7BE2',
+        borderWidth:1,
+        marginLeft:10,
+        justifyContent:'center',
+        alignItems:'center',
+        borderRadius:5,
+    },
+    //hook> useState
 
 });
