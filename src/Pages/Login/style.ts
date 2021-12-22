@@ -1,17 +1,64 @@
 import {StyleSheet} from 'react-native';
 
-
 export const styles = StyleSheet.create({
     container:{
         flex:1,
         justifyContent:'center',
-        marginHorizontal:100,
+        marginHorizontal:50,
+    },
+    body:{
+        flex:1,
+        justifyContent:'center',
+        backgroundColor:"#4287f5",
+    },
+    link:{
+        alignItems:'center',
+        justifyContent:'center',
+        marginTop:65,
+    },
+    linker:{
+        color:'white',
+        textDecorationLine:'underline',
+    },
+    button:{
+        backgroundColor:"#1f4ea6",
+        height:45,
+        alignItems:'center',
+        justifyContent:'center',
+        borderRadius:4,
+        color:'white',
+        margin:15,
+    },
+    viewButtonText:{
+        color:"#F5FFFF",
+        fontSize:15,
+        fontWeight:'bold',
     },
     textInput:{
-        height:40,
-        borderColor:"#4369B0",
+        height:45,
+        borderColor:"#F5FFFF",
+        backgroundColor:"#e6f0f0",
         borderWidth:1,
         borderRadius:0,
         color:'black',
+        margin:15,
+        padding:10,
+        fontSize:15,
+    },
+    Image:{
+        height:42,
+        width:42,
+        marginRight:7,
+    },
+    logo:{
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'center',
+        marginBottom:50,
+    },
+    texto:{
+        fontSize:40,
+        fontWeight:'bold',
+        color:'#F5FFFF',
     },
 });
