@@ -1,10 +1,14 @@
 import React, {useState} from 'react';
 import { View, Text , TextInput , Image, TouchableOpacity} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {StackNavigatorParamList} from '../types';
 import { styles } from './style';
 
-
+type LoginPros = NativeStackNavigationProp<StackNavigatorParamList,'Login'>;
 const Login = () => {
-    const [meuTexto,setMeuTexto] = useState('Tere');
+    const navigation = useNavigation<LoginPros>();
+    const [meuTexto,setMeuTexto] = useState('');
     return(
         <View style={styles.body}>
             <View style={styles.container}>
@@ -25,7 +29,7 @@ const Login = () => {
                     onChangeText={(text)=>{setMeuTexto(text);console.log(meuTexto)}}
                     placeholder="Password"
                 />
-                <TouchableOpacity style={styles.button} onPress={()=>{}}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
                     <Text style={styles.viewButtonText}>Log in</Text>
                 </TouchableOpacity>
 
